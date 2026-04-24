@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Nunito", sans-serif;
+  --color-rose-deep: #7c2d4a;
+  --color-plum: #4a1d4e;
+  --color-blush: #fce7f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body), system-ui, sans-serif;
+  background: #0f0514;
+  color: #fdf2f8;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Soft glow background layer */
+.romantic-bg {
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(236, 72, 153, 0.35), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 100% 50%, rgba(168, 85, 247, 0.2), transparent 50%),
+    radial-gradient(ellipse 60% 50% at 0% 80%, rgba(244, 114, 182, 0.15), transparent 45%),
+    linear-gradient(165deg, #1a0a22 0%, #0f0514 40%, #15081c 100%);
+}
+
+/* Custom heart cursor on desktop */
+@media (pointer: fine) {
+  .heart-cursor-active {
+    cursor: none;
+  }
+}
+
+/* Reduced motion: respect prefers-reduced-motion in components via Framer */
